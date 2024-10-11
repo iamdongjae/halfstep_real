@@ -73,4 +73,4 @@ genai.configure(api_key=api_key)<br/>
 
 
 ### 10. 웹페이지 실행.
-/home/iamdongjae/works/halfstep_final/public/templates/home.html <br/>
+/home/username/halfstep_real/public/templates/home.html <br/>
