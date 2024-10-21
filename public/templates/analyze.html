@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">
-    <title>반발자국 - YouTube 요약 및 감정 분석</title>
+    <title>아인 - YouTube 요약 및 감정 분석</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="YouTube 요약 및 감정 분석 시스템" name="description">
 
-    <!-- Favicon -->
+    <!-- Favicon --> 
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
@@ -20,8 +20,31 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- Custom Stylesheet for logo colors and layout adjustments -->
+    <style>
+        .bg-primary {
+            background-color: #e6f7e6 !important; /* 로고 색상에 맞춰 배경색 조정 */
+        }
+        .btn-primary {
+            background-color: #a3d5a3 !important; /* 버튼 색상 변경 */
+            border-color: #a3d5a3;
+        }
+        .text-custom {
+            color: #4a804a; /* 텍스트 색상 조정 */
+        }
+
+        /* 공백을 줄이기 위한 스타일 수정 */
+        .hero-header {
+            padding-top: 2rem; /* 상단 padding을 줄여서 공백 조정 */
+            padding-bottom: 2rem;
+        }
+        .navbar {
+            margin-bottom: 0rem; /* 네비게이션 바와 헤더 사이의 공백 최소화 */
+        }
+        .content-container {
+            padding-top: 1rem; /* 컨텐츠 상단 공백 줄임 */
+        }
+    </style>
 </head>
 
 <body>
@@ -30,23 +53,24 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="#" class="navbar-brand p-0">
-                <h1 class="text-primary m-0">반발자국</h1>
+                <!-- 로고 이미지 추가 -->
+                <img src="https://github.com/201910800park-sun-woo/Images/blob/main/ainlogo3.jpg?raw=true" alt="로고" style="width: 60px; height: auto;" class="me-2">
             </a>           
         </nav>
 
-        <div class="container-fluid bg-primary py-5 mb-5 hero-header" style="background-image: url('img/nature.jpg'); background-size: cover; background-position: center;">
-            <div class="container py-5">
-                <div class="row justify-content-center py-5">
-                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white mb-3 animated slideInDown">YouTube 동영상 요약<br> 감정 분석</h1>
-                        <p class="fs-4 text-white mb-4 animated slideInDown">분석하고 싶은 YouTube 동영상 URL을 입력하세요.</p>
+        <div class="container-fluid bg-primary py-5 hero-header">
+            <div class="container content-container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h1 class="display-4 text-custom mb-3 animated slideInDown">아이들의 YouTube <br> 가이드 라인</h1>
+                        <p class="fs-4 text-custom mb-4 animated slideInDown">분석하고 싶은 YouTube 동영상 URL을 입력하세요.</p>
                         <div class="position-relative w-75 mx-auto animated slideInDown">
                             <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" id="youtube-url" type="text" placeholder="YouTube URL 입력">
                             <button id="analyze-btn" type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">분석 시작</button>
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- 분석 결과 표시 영역 -->
                 <div class="row justify-content-center mt-4">
                     <div class="col-lg-8">
@@ -60,7 +84,7 @@
     </div>
     <!-- Navbar & Hero End -->
 
-    <!-- About Start -->
+    <!-- About Us Section -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
@@ -70,16 +94,16 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                    <h6 class="section-title bg-white text-start text-custom pe-3">About Us</h6>
                     <h1 class="mb-4">반발자국 팀</h1>
                     <p class="mb-4">
-                        저희는 상명대학교 졸업프로젝트로 YouTube 동영상의 내용을 요약하고 감정 분석을 제공하는 시스템을 개발하고 있습니다.
+                        저희는 상명대학교 졸업프로젝트로, YouTube 동영상을 요약하고 감정 분석, 욕설 비율 분석 등 다양한 기능을 제공하는 시스템을 개발하고 있습니다.
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- About Us End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -88,6 +112,7 @@
                 <div class="col-lg-6 col-md-6">
                     <h4 class="text-white mb-3">Contact Us</h4>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>psw9983@gmail.com and iamdongjae@gmail.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>iamdongjae@gmail.com</p>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <h4 class="text-white mb-3">Follow Us</h4>
@@ -150,5 +175,5 @@
     </script>
 
 </body>
-
 </html>
+

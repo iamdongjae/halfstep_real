@@ -73,4 +73,19 @@ genai.configure(api_key=api_key)<br/>
 
 
 ### 10. 웹페이지 실행.
-/home/username/halfstep_real/public/templates/home.html <br/>
+/home/iamdongjae/works/halfstep_real/public/templates/home.html <br/>
+
+
+
+토사물 뉴스 행복
+https://www.youtube.com/watch?v=Ut6PS-0gVKY
+
+태풍 뉴스 
+놀람: https://www.youtube.com/watch?v=2vQjp-Nx31s
+공포: https://www.youtube.com/watch?v=rh5t-4-V2GU
+
+아빠 아들 혼냄
+혐오: https://www.youtube.com/watch?v=ot-EVhokGOY
+
+야구 분노표출
+분노: https://www.youtube.com/watch?v=MGoy5-G3Ap0

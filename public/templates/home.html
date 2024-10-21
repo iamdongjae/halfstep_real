@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>시작 페이지</title>
+    <title>아인 - YouTube 가이드라인</title> 
 
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
@@ -16,18 +16,58 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- Custom Stylesheet for logo colors -->
+    <style>
+        body {
+            background-color: #e6f7e6; 
+        }
+        .btn-custom {
+            background-color: #a3d5a3; 
+            color: #fff;
+        }
+        .text-custom {
+            color: #4a804a; 
+        }
+        .feature-section {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .feature-section .row {
+            margin-top: 2rem; 
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- 시작 페이지 컨텐츠 -->
-    <div class="container-fluid bg-primary vh-100 d-flex justify-content-center align-items-center">
-        <div class="text-center text-white">
-            <h1 class="display-3 mb-4">반발자국에 오신 것을 환영합니다!</h1>
-            <p class="fs-4 mb-4">YouTube 동영상 요약 및 감정 분석 시스템</p>
-            <a href="analyze.html" class="btn btn-light btn-lg px-5 py-3">시작하기</a>
+    <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <!-- 로고 이미지 추가 -->
+            <img src="https://github.com/201910800park-sun-woo/Images/blob/main/ainlogo3.jpg?raw=true" alt="로고" style="width: 150px; height: auto;" class="me-2">
+            <p class="fs-4 mb-4 text-custom">아이들을 위한 YouTube 가이드라인</p>
+            <a href="analyze.html" class="btn btn-custom btn-lg px-5 py-3">시작하기</a>
+
+            <!-- 기능 설명 섹션 -->
+            <div class="container feature-section text-center">
+                <div class="row">
+                    <div class="col-md-4">
+                        <i class="bi bi-file-text" style="font-size: 3rem; color: #4a804a;"></i>
+                        <h4 class="text-custom mt-3">동영상 요약</h4>
+                        <p>긴 YouTube 동영상을 간단하게 요약해주는 기능을 제공합니다.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="bi bi-emoji-smile" style="font-size: 3rem; color: #4a804a;"></i>
+                        <h4 class="text-custom mt-3">감정 분석</h4>
+                        <p>동영상 내용을 분석하여 긍정적, 부정적 감정을 분류합니다.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="bi bi-exclamation-triangle" style="font-size: 3rem; color: #4a804a;"></i>
+                        <h4 class="text-custom mt-3">욕설 비율 분석</h4>
+                        <p>동영상의 대사 중 욕설의 비율을 분석하여 보여줍니다.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -37,3 +77,4 @@
 </body>
 
 </html>
+
