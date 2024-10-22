@@ -7,7 +7,7 @@ import sys
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
 # Google API 키 설정
-api_key = 'AIzaSyADdns1l3NQaxNBuf8RqjcuDkMzXTbQYeA'  # 실제 Google API 키를 여기에 입력하세요
+api_key = '실제 Google API 키를 여기에 입력하세요'  # 실제 Google API 키를 여기에 입력하세요
 genai.configure(api_key=api_key)
 
 def summarize_video(youtube_url):
