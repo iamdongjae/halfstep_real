@@ -4,9 +4,10 @@ import os
 import google.generativeai as genai
 import json
 import sys
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
 # Google API 키 설정
-api_key = '# 실제 Google API 키를 여기에 입력하세요'  # 실제 Google API 키를 여기에 입력하세요
+api_key = 'AIzaSyADdns1l3NQaxNBuf8RqjcuDkMzXTbQYeA'  # 실제 Google API 키를 여기에 입력하세요
 genai.configure(api_key=api_key)
 
 def summarize_video(youtube_url):
@@ -49,15 +50,26 @@ def summarize_video(youtube_url):
 
     # Google Generative AI에서 텍스트 생성 요청
     model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content(prompt)
+    response = model.generate_content(
+        contents=prompt, 
+        safety_settings={
+            HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+            HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+            HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+            HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE
+    })
 
-    # 요약된 텍스트 추출
-    summary_text = response.text  # 생성된 텍스트 추출
-
-    # 요약된 텍스트 파일로 저장 (UTF-8 인코딩)
-    summary_file_name = video_id + '_summary.txt'
-    with open(summary_file_name, 'w', encoding='utf-8') as file:
-        file.write(summary_text)
+    try:
+        # 요약된 텍스트 추출
+        summary_text = response.text  # 생성된 텍스트 추출
+        # 요약된 텍스트 파일로 저장 (UTF-8 인코딩)
+        summary_file_name = video_id + '_summary.txt'
+        with open(summary_file_name, 'w', encoding='utf-8') as file:
+            file.write(summary_text)
+    except Exception as ex:
+        print("{error}".format(error=ex))
+        summary_text = "NA"
+        summary_file_name = "NA"
 
     # 결과를 JSON으로 출력 (stdout) - ensure_ascii=False로 UTF-8 인코딩 보장
     output_data = {
