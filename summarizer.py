@@ -46,7 +46,7 @@ def summarize_video(youtube_url):
     print(f"텍스트 변환 결과 저장: {raw_file_name}")
 
     # Google Gemini API 사용
-    prompt = '다음 영상은 유튜브 내용을 텍스트로 변환한 내용인데 너무 길어서 3줄로 요약해서 항상 한국어로 알려줘. \n 내용: \n' + raw_text
+    prompt = '다음 내용을 3줄로 요약해줘 \n 내용: \n' + raw_text
 
     # Google Generative AI에서 텍스트 생성 요청
     model = genai.GenerativeModel('gemini-pro')
